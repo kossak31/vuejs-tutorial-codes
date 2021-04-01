@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue JS Get Selected Option Text</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+<div id="app">
+    
+  <select name="category_id" @change="onChange($event)" class="form-control">
+     <option>--- Select Category ---</option>
+     <option value="1">PHP</option>
+     <option value="2">Laravel</option>
+     <option value="3">Codeigniter</option>
+     <option value="4">Vue JS</option>
+     <option value="5">Angular JS</option>
+  </select>
+    
+</div>
+    
+<script type="text/javascript">
+    
+    var app = new Vue({
+      el: '#app',
+      methods: {
+          onChange(event) {
+              //get selected option value
+              var optionValue = event.target.value;
+
+              //get selected option text
+              var optionText = event.target.options[event.target.options.selectedIndex].text;
+              
+              //display
+              console.log(optionText);
+              console.log(optionValue);
+          }
+      }
+    })
+    
+</script>
+     
+</body>
+</html>

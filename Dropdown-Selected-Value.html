@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue JS Get Dropdown Selected Value</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  
+<div id="app">
+  
+  <select name="category_id" @change="onChange($event)" class="form-control">
+     <option>--- Seleciona uma categoria ---</option>
+     <option value="1">PHP</option>
+     <option value="2">Laravel</option>
+     <option value="3">Codeigniter</option>
+     <option value="4">Vue JS</option>
+     <option value="5">Angular JS</option>
+  </select>
+  
+</div>
+  
+<script type="text/javascript">
+  
+    var app = new Vue({
+      el: '#app',
+      methods: {
+          onChange(event) {
+              //set var optionSelect with @change="onChange($event)"
+              var optionSelect = event.target.value;
+              console.log(optionSelect);
+          }
+      }
+    })
+  
+</script>
+   
+</body>
+</html>

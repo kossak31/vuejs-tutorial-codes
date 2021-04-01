@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to use ternary operator in Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+<div id="app">
+     
+  <h1>How to use ternary operator in Vuejs</h1>
+  <div>Name: {{ myVar == 1 ? 'option 1' : 'option 2' }}</div>
+  
+</div>
+    
+<script type="text/javascript">
+   
+    var app = new Vue({
+      el: '#app',
+      data: {
+        myVar:1
+      }
+    })
+     
+</script>
+     
+</body>
+</html>

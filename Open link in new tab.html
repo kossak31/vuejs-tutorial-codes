@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open link in new tab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+</head>
+<body>
+  
+<div id="app">
+  <button @click="myFunction()">Click Me</button>
+</div>
+  
+<script type="text/javascript">
+  new Vue({
+    el: '#app',
+    data: {
+      myModel:false
+    },  
+    methods:{
+      myFunction: function () {   
+          window.open("https://sapo.pt", "_blank");    
+      }
+    }
+  });
+</script>
+  
+</body>
+</html>

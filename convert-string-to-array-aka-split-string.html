@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue JS Convert String to Array | Vue JS Split String Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <p>String : {{ myString }}</p>
+        <p>Array : {{myResult}}</p>
+        <button @click="clickFunction()">Click Me</button>
+
+    </div>
+
+    <script type="text/javascript">
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                myString: "This is a string",
+                myResult: ''
+            },
+            methods: {
+                clickFunction: function () {
+                    this.myResult = this.myString.split(" ");
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

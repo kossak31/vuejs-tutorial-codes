@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to check object or array empty or not</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  
+<ul id="app">
+  <li v-if="!items.length">No item found</li>
+  <li v-for="item in items_full">
+  </li>
+</ul>
+  
+</body>
+  
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+      items: [],
+      items_full: ['hey', 'yo', 'hello']
+    }
+});
+</script>
+</html>

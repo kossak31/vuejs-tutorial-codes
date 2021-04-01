@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to replace string</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  
+<div id="app">
+    <div id="myId" ref="myId">{{ message }}</div>
+    <button @click="myFunction()">Click Me</button>
+</div>
+  
+</body>
+  
+<script type="text/javascript">
+    new Vue({
+      el: '#app',
+      data: { 
+          message:"Welcome to palavra"
+      },
+      methods:{
+            myFunction: function () {
+                this.message = this.message.replace("palavra", "palavra substituida");    
+            }
+      }
+    });
+</script>
+</html>

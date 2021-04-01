@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue JS - Get Query Parameters Example - ItSolutionStuff.com</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue-router"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>http://localhost:8000 ?name=Hardik &email=hd@gmail.com</h1>
+    </div>
+
+    <script type="text/javascript">
+
+        var router = new VueRouter({
+            mode: 'history',
+            routes: []
+        });
+
+        var myApp = new Vue({
+            router,
+            el: '#app',
+            mounted: function () {
+                parameters = this.$route.query
+                console.log(parameters)
+
+                name = this.$route.query.name
+                console.log(name)
+
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>

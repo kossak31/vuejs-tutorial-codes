@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How to get element by id</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  
+<div id="app">
+    <div id="myId" ref="myId">{{ message }}</div>
+    <button @click="myFunctionClick()">Click Here</button>
+</div>
+  
+</body>
+  
+<script type="text/javascript">
+ new Vue({
+    el: '#app',
+    data: { 
+          message:"Welcome"
+      },
+      methods:{
+        myFunctionClick: function () {        
+            this.$refs.myId.innerText = 'Hello Bro';
+        }
+    }
+});
+</script>
+</html>

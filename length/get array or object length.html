@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue JS Get Array Length Or Object Length Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+   
+<div id="app">
+   
+  <ul id="exampleApp">
+    <li v-if="myArray.length">Object Length = {{ myArray.length }}</li>
+    <li v-for="value in myArray">
+      {{ value.category }}
+    </li>
+  </ul>
+  
+</div>
+  
+<script type="text/javascript">
+  
+    var app = new Vue({
+      el: '#app',
+      data: {
+        myArray: [
+          { category: 'Laravel' },
+          { category: 'PHP' },
+          { category: 'Codeigniter' }
+        ]
+      }
+    })
+  
+</script>
+  
+</body>
+</html>
